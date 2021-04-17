@@ -1,5 +1,7 @@
-void comp_prefix(vector<int> &prefix, string p)
+
+void comp_prefix(vector<int> &prefix, const string &z) 
 {
+	string p = z;
 	if(p[0] != ' ')
 		p = " " + p;
 	int m = p.length();
@@ -16,8 +18,10 @@ void comp_prefix(vector<int> &prefix, string p)
 	}
 }
 
-vector<int> kmp_matcher(string t, string p)
+vector<int> kmp_matcher(const string &templ, const string& patt)
 {
+	t = templ;
+	p = patt;
 	t = " " + t;
 	p = " " + p;
 	int n = t.length();
